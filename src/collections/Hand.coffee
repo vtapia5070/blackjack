@@ -31,7 +31,22 @@ class window.Hand extends Backbone.Collection
     score2
 
   stand: ->
+    @trigger('stand', @)
     
   dealerFinish: ->
+    @at(0).flip() 
+    while do @scores < 17
+      do @hit
+    if do @scores <= 21
+      @trigger('compareHands', @)
 
+  endGame: (playerScore) ->
+    console.log('ending game')
+    if playerScore == do @scores
+      alert("Tie Game!")
+    else if playerScore > do @scores
+      alert("Player Wins")
+    else 
+      alert("Dealer Wins")
+      
 

@@ -11,6 +11,7 @@ class window.AppView extends Backbone.View
 
   initialize: ->
     @render()
+    # @collection.on 'stand', => console.log("stand")
 
   render: ->
     @$el.children().detach()

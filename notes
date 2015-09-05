@@ -24,4 +24,6 @@ App View Click happens calls .()stand   --already built
 while dealer is playing how will we retrieve the players score to declare who wins
   - have a finished trigger when dealer is finished 
     - in app have listener for finished
-    - compares two scores in app
+    - compares two scores iin app
+
+if 
