@@ -32,13 +32,38 @@ class window.Hand extends Backbone.Collection
 
   stand: ->
     @trigger('stand', @)
+
+  hitting: =>
+    setTimeout (=>
+      @hit()
+      if @scores() < 17
+        @hitting()
+      else if do @scores <= 21
+        @trigger('compareHands', @)
+      return
+    ), 750
+    return
     
   dealerFinish: ->
     @at(0).flip() 
-    while do @scores < 17
-      do @hit
-    if do @scores <= 21
-      @trigger('compareHands', @)
+      # while do @scores < 17
+      #   delay 500, do @hit
+    @hitting()
+    
+    # callHit = ->
+    #   do hit
+    #   if do @scores < 17 
+    #     do callTimeout
+
+    # callTimeOut = ->
+    #   setTimeout(
+    #     do callHit
+    #     ,2000
+    #   )
+
+    # do callTimeOut
+
+
 
   endGame: (playerScore) ->
     console.log('ending game')
@@ -48,5 +73,3 @@ class window.Hand extends Backbone.Collection
       alert("Player Wins")
     else 
       alert("Dealer Wins")
-      
-
