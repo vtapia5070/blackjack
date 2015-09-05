@@ -8,9 +8,11 @@ class window.Hand extends Backbone.Collection
     @add(@deck.pop())
     if do @scores > 21 
       if @isDealer
-        alert("Player Wins") 
+        if alert("Player Wins")
+        else window.location.reload() 
       else
-        alert("Dealer Wins")
+        if alert("Dealer Wins")
+        else window.location.reload() 
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
@@ -68,8 +70,11 @@ class window.Hand extends Backbone.Collection
   endGame: (playerScore) ->
     console.log('ending game')
     if playerScore == do @scores
-      alert("Tie Game!")
+      if alert("Player Wins")
+      else window.location.reload() 
     else if playerScore > do @scores
-      alert("Player Wins")
+      if alert("Player Wins")
+      else window.location.reload() 
     else 
-      alert("Dealer Wins")
+      if alert("Dealer Wins")
+      else window.location.reload() 
