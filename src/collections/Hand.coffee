@@ -2,9 +2,15 @@ class window.Hand extends Backbone.Collection
   model: Card
 
   initialize: (array, @deck, @isDealer) ->
+    @isDealer = @isDealer
 
   hit: ->
     @add(@deck.pop())
+    if do @scores > 21 
+      if @isDealer
+        alert("Player Wins") 
+      else
+        alert("Dealer Wins")
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
@@ -23,5 +29,9 @@ class window.Hand extends Backbone.Collection
     if score2 > 21
       score2 = score
     score2
+
+  stand: ->
+    
+  dealerFinish: ->
 
 

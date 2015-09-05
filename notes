@@ -1,0 +1,27 @@
+x- fix ace
+X- player losing condition
+  X- score > 21
+  - stand:
+    - display dealer
+      - add cards until reaches 17
+        - if dealer bust let player win
+      - compare scores
+- write unit tests
+- pick two (read me)
+
+
+3 Collections
+- Deck
+- playerHand
+- dealerHand
+
+
+App View Click happens calls .()stand   --already built
+  stand is called: trigger stand event
+    App.coffee listens for stand trigger: calls dealer.finishHand()
+      dealer's hand finishes the hand
+
+while dealer is playing how will we retrieve the players score to declare who wins
+  - have a finished trigger when dealer is finished 
+    - in app have listener for finished
+    - compares two scores in app
