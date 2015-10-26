@@ -1,5 +1,6 @@
 body {
-  background-color: #2c6d65;
+  background-color: #212121;
+  color: #212121;
 }
 
 .card {
@@ -21,3 +22,25 @@ body {
 .covered {
   background-color: black;
 }
+
+.container {
+  background-color: #00796B;
+  width: 50%;
+  margin: 5% auto;
+  border: 5px solid #727272;
+  border-style: outset;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  height: 5%;
+  width: 15%;
+  margin: 3px;
+  background-color: #727272;
+  font-weight: bold;
+  font-size: 15px;
+  color: #212121;
+}
+
+
