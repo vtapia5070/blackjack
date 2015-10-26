@@ -1,3 +1,5 @@
+To compile to coffeescript :
+coffee --output compiled --map --watch --compile ./
 x- fix ace
 X- player losing condition
   X- score > 21
