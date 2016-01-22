@@ -9,11 +9,9 @@ This is a backbone application written in CoffeScript, to implement an interacti
 
 ##Development
 ##Installing Dependencies
-From within the root directory install all dependencies with the following command:
 
-```
-npm install
-```
+Dependencies should be included in /lib
+
 To compile to coffeescript and run in browser run the following command:
 ```
 coffee --output compiled --map --watch --compile ./
